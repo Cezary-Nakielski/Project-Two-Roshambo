@@ -7,9 +7,49 @@
 }
 
 body {
+    background-color: #181A1B;
     font-family: 'Henny Penny', cursive;
 }
 
 .container {
     text-align: center;
+}
+
+/* HEADER */
+
+h1 {
+    color: #00ff1d;
+    font-size: 4rem;
+}
+
+/* COMPUTER CHOICE AREA */
+
+.computer-area {
+    color: white;
+}
+
+/* SCORE AREA */
+
+.computer-area p {
+    letter-spacing: 0.1rem;
+    padding-top: 0.5rem;
+}
+
+/* PADDING */
+
+header, .container {
+    padding-bottom: 5rem;
+}
+
+/* HEADINGS */
+
+h2 {
+    color: red;
+}
+
+/* ICONS */
+
+i {
+    color: #005CE6;
+    font-size: 5rem;
 }
