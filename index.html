@@ -27,13 +27,13 @@
     <div class="container player-choice-area">
         <div class="row">
             <div class="col rock-area">
-                <i class="fas fa-hand-rock"></i>
+                <button data-choice="rock"><i class="fas fa-hand-rock"></i></button>
             </div>
             <div class="col paper-area">
-                <i class="fas fa-hand-paper"></i>
+                <button data-choice="paper"><i class="fas fa-hand-paper"></i></button>
             </div>
             <div class="col scissors-area">
-                <i class="fas fa-hand-scissors"></i>
+                <button data-choice="scissors"><i class="fas fa-hand-scissors"></i></button>
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
                     <div class="col">
                         <p class="scores">You  <span id="player-score">0</span></p>
                     </div>
-                    <div class="colon">:</div>
+                    <hr>
                     <div class="col">
                         <p class="scores">Robot  <span id="computer-score">0</span></p>
                     </div>
@@ -62,12 +62,13 @@
             </div>
 
             <div class="col computer-choice-area">
-                <i class="fas fa-robot"></i>
+                <button><i class="fas fa-robot"></i></button>
+                
             </div>
             
             <div class="col reset-area">
                 <h2>Reset</h2>
-                <button></button>
+                <button data-choice="reset"><i class="fas fa-power-off"></i></button>
             </div>
         </div>
     </div>

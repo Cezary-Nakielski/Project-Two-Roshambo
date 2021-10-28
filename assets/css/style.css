@@ -19,11 +19,15 @@ header, .container {
     padding-bottom: 5rem;
 }
 
-/* HEADER */
 
-h1 {
-    color: #00ff1d;
-    font-size: 4rem;
+/* PLAYER CHOICE AREA */
+
+.player-choice-area button {
+    transition: transform 0.1s ease-in-out;
+}
+
+.player-choice-area button:active {
+    transform: scale(1.5,1.5);
 }
 
 /* VERSUS AREA */
@@ -56,6 +60,11 @@ h1 {
 
 /* HEADINGS */
 
+h1 {
+    color: #00ff1d;
+    font-size: 4rem;
+}
+
 h2 {
     color: red;
 }
@@ -65,4 +74,10 @@ h2 {
 i {
     color: #005CE6;
     font-size: 5rem;
+}
+
+/* BUTTONS */
+
+button {
+    background-color: #181A1B;
 }
