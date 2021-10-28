@@ -15,6 +15,10 @@ body {
     text-align: center;
 }
 
+header, .container {
+    padding-bottom: 5rem;
+}
+
 /* HEADER */
 
 h1 {
@@ -22,10 +26,25 @@ h1 {
     font-size: 4rem;
 }
 
+/* VERSUS AREA */
+
+.versus-area {
+    background-color: seashell;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.versus-area h2 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
 /* COMPUTER CHOICE AREA */
 
 .computer-area {
     color: white;
+    padding-top: 4rem;
 }
 
 /* SCORE AREA */
@@ -33,12 +52,6 @@ h1 {
 .computer-area p {
     letter-spacing: 0.1rem;
     padding-top: 0.5rem;
-}
-
-/* PADDING */
-
-header, .container {
-    padding-bottom: 5rem;
 }
 
 /* HEADINGS */
