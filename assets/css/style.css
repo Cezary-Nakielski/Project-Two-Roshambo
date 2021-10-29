@@ -34,15 +34,23 @@ h2 {
 
 /* PLAYER CHOICE AREA */
 .player-choice-area button {
+    -webkit-transition: -webkit-transform 0.1s ease-in-out;
+    transition: -webkit-transform 0.1s ease-in-out;
+    -o-transition: transform 0.1s ease-in-out;
     transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
 }
 
 .player-choice-area button:active {
-    transform: scale(1.5, 1.5);
+    -webkit-transform: scale(1.5, 1.5);
+        -ms-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
 }
 
 /* VERSUS AREA */
 .versus-area {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(yellow), to(red));
+    background-image: -o-linear-gradient(red, yellow, red);
     background-image: linear-gradient(red, yellow, red);
     margin: 0 auto;
     padding-top: 1rem;
@@ -75,11 +83,17 @@ hr {
 /* RESET AREA */
 
 .reset-area button {
+    -webkit-transition: -webkit-transform 0.1s ease-in-out;
+    transition: -webkit-transform 0.1s ease-in-out;
+    -o-transition: transform 0.1s ease-in-out;
     transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
 }
 
 .reset-area button:active {
-    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
 }
 
 /* ICONS */
