@@ -2,6 +2,12 @@
 // Variable needed for the event listener loop
 const buttons = document.getElementsByClassName("choice-button");
 
+// Variables needed for the functions updating the score
+const userScore = document.getElementById("player-score");
+const robotScore = document.getElementById("computer-score");
+let playerScore = 0;
+let computerScore = 0;
+
 /**
  * Event listener loop for all interactive buttons
  */
@@ -89,22 +95,23 @@ function choiceResult() {
  */
 function resetGame() {
     document.getElementById("robot-choice").setAttribute("class", "fas fa-robot");
-    document.getElementsByClassName("player-score").innerText = 0;
-    document.getElementsByClassName("computer-score").innerText = 0;
+    document.getElementById("player-score").innerText = 0;
+    document.getElementById("computer-score").innerText = 0;
+    playerScore = 0;
+    computerScore = 0;
 }
 
 /**
  * Increases the number of players wins and evokes a win alert
  */
  function win() {
-    let playerScore = parseInt(document.getElementsByClassName("player-score").innerText);
     playerScore++;
-    document.getElementsByClassName("player-score").innerText = playerScore;
+    userScore.innerHTML = playerScore
     setTimeout(function(){ swal({
         title: "Win",
         icon: "success",
         button: false,
-        timer: 1500,
+        timer: 1200,
       }); }, 100);
 }
 
@@ -112,14 +119,13 @@ function resetGame() {
  * Increases the number of computers wins and evokes a defeat alert 
  */
 function defeat() {
-    let computerScore = parseInt(document.getElementsByClassName("computer-score").innerText);
     computerScore++;
-    document.getElementsByClassName("computer-score").innerText = computerScore;
+    robotScore.innerHTML = computerScore
     setTimeout(function(){ swal({
         title: "Defeat",
         icon: "error",
         button: false,
-        timer: 1500,
+        timer: 1200,
       }); }, 100);
 }
 
@@ -131,6 +137,6 @@ function draw() {
         title: "Draw",
         icon: "info",
         button: false,
-        timer: 1500,
+        timer: 1200,
       }); }, 100);
 }
