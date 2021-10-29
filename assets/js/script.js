@@ -1,6 +1,10 @@
 
+// Variable needed for the event listener loop
 const buttons = document.getElementsByClassName("choice-button");
 
+/**
+ * Event listener loop for all interactive buttons
+ */
 for (let button of buttons) {
     button.addEventListener("click", function() {
        let playerChoice = this.getAttribute("data-choice");
@@ -19,8 +23,7 @@ for (let button of buttons) {
     });
 }
 
-
-
+// Functions passing data from event listeners to the function comparing the player and computer choices
 function rockData() {
     choiceResultData = "fas fa-hand-rock";
 }
@@ -33,11 +36,9 @@ function scissorsData() {
     choiceResultData = "fas fa-hand-scissors";
 }
 
-
-
-
-
-
+/**
+ * Picks random number between 0 and 2 and changes the robot icon into either rock, paper or scissors icon
+ */
 function robotChoice() {
     let robotNumber = Math.floor(Math.random()*3);
 
@@ -51,7 +52,9 @@ function robotChoice() {
     choiceResult();
 }
 
-
+/**
+ * Compares the player choice and the computer choice
+ */
 function choiceResult() {
     let playerResult = choiceResultData;
     let robotResult = document.getElementById("robot-choice").getAttribute("class");
@@ -81,44 +84,11 @@ function choiceResult() {
     }
 }
 
+/**
+ * Resets the score and changes the computers icon back into the robot icon
+ */
 function resetGame() {
     document.getElementById("robot-choice").setAttribute("class", "fas fa-robot");
     document.getElementsByClassName("player-score").innerText = 0;
     document.getElementsByClassName("computer-score").innerText = 0;
-}
-
-function win() {
-    let playerScore = parseInt(document.getElementsByClassName("player-score").innerText);
-    playerScore++;
-    document.getElementsByClassName("player-score").innerText = playerScore;
-    setTimeout(function(){ swal({
-        title: "Win",
-        icon: "success",
-        button: false,
-        timer: 1500,
-      }); }, 100);
-}
-
-
-function defeat() {
-    let computerScore = parseInt(document.getElementsByClassName("computer-score").innerText);
-    computerScore++;
-    document.getElementsByClassName("computer-score").innerText = computerScore;
-    setTimeout(function(){ swal({
-        title: "Defeat",
-        icon: "error",
-        button: false,
-        timer: 1500,
-      }); }, 100);
-}
-
-
-
-function draw() {
-    setTimeout(function(){ swal({
-        title: "Draw",
-        icon: "info",
-        button: false,
-        timer: 1500,
-      }); }, 100);
 }
