@@ -92,3 +92,45 @@ function resetGame() {
     document.getElementsByClassName("player-score").innerText = 0;
     document.getElementsByClassName("computer-score").innerText = 0;
 }
+
+/**
+ * Increases the number of players wins and evokes a win alert
+ */
+ function win() {
+    let playerScore = parseInt(document.getElementsByClassName("player-score").innerText);
+    playerScore++;
+    document.getElementsByClassName("player-score").innerText = playerScore;
+    setTimeout(function(){ swal({
+        title: "Win",
+        icon: "success",
+        button: false,
+        timer: 1500,
+      }); }, 100);
+}
+
+/**
+ * Increases the number of computers wins and evokes a defeat alert 
+ */
+function defeat() {
+    let computerScore = parseInt(document.getElementsByClassName("computer-score").innerText);
+    computerScore++;
+    document.getElementsByClassName("computer-score").innerText = computerScore;
+    setTimeout(function(){ swal({
+        title: "Defeat",
+        icon: "error",
+        button: false,
+        timer: 1500,
+      }); }, 100);
+}
+
+/**
+ * Evokes a draw alert
+ */
+function draw() {
+    setTimeout(function(){ swal({
+        title: "Draw",
+        icon: "info",
+        button: false,
+        timer: 1500,
+      }); }, 100);
+}
