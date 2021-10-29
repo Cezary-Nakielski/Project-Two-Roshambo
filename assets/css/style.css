@@ -15,7 +15,8 @@ body {
     text-align: center;
 }
 
-header, .container {
+header,
+.container {
     padding-bottom: 5rem;
 }
 
@@ -37,7 +38,7 @@ h2 {
 }
 
 .player-choice-area button:active {
-    transform: scale(1.5,1.5);
+    transform: scale(1.5, 1.5);
 }
 
 /* VERSUS AREA */
@@ -71,13 +72,23 @@ hr {
     padding-top: 0.5rem;
 }
 
+/* RESET AREA */
+
+.reset-area button {
+    transition: transform 0.1s ease-in-out;
+}
+
+.reset-area button:active {
+    transform: scale(1.1, 1.1);
+}
+
 /* ICONS */
 i {
     color: #005CE6;
     font-size: 5rem;
 }
 
-.reset-area  i {
+.reset-area i {
     color: #00ff1d;
 }
 
