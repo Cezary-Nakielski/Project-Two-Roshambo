@@ -106,7 +106,7 @@ function resetGame() {
  */
  function win() {
     playerScore++;
-    userScore.innerHTML = playerScore
+    userScore.innerHTML = playerScore;
     setTimeout(function(){ swal({
         title: "Win",
         icon: "success",
@@ -120,7 +120,7 @@ function resetGame() {
  */
 function defeat() {
     computerScore++;
-    robotScore.innerHTML = computerScore
+    robotScore.innerHTML = computerScore;
     setTimeout(function(){ swal({
         title: "Defeat",
         icon: "error",
